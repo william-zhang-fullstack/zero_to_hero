@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* when you set a width ... the elem stays that width despite padding/borders
+   see https://daker.me/2013/07/understanding-css3-box-sizing-property.html for more
+*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 30px;
+}
+
+/* set column width */
+.col-2-3 {
+  margin-right: 20px;
+  border: 1px solid black;
+}
+.col-1-3 {
+  border: 1px solid black;
+}
