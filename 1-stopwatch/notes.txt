@@ -1,0 +1,24 @@
+https://medium.com/@kamranahmedse/modern-frontend-developer-in-2018-4c2072fa2b9c
+
+A simple challenge to a beginner: make a stopwatch where the user can start,
+stop, pause, and reset. It isn't clear to me what the difference is between
+stop and pause are. Perhaps stop means pause and reset simultaneously? I'm going
+to adjust the parameters of the challenge and model my stopwatch after the
+stopwatch on my mobile.
+
+Lucky for me I have a coding background so I think I can plan ahead for how I
+want to design this app.
+
+The core piece of user feedback is the time on the stopwatch which I intend to
+display hours:minutes:seconds. This will loop over at 99:59:59.
+
+The core features are start, stop, resume, and reset. The initial state of the
+stopwatch is 00:00:00 on the clock and a start button. The clock increments
+upon pressing the start button and the start button changes to a stop button.
+Upon pressing the stop button, the clock pauses and the stop button changes to
+a resume button and a reset button. The resume button brings the app back to a
+clock increment state while the reset button brings the app back to the start
+state. This closes the loop of the application.
+
+I'll layout the functional components on one commit and then iteratively
+commit changes for the app's look.
