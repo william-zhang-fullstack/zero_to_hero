@@ -53,3 +53,7 @@ what they accomplished during the session ordered by category.
 References
 I heavily use code from various YouTube tutorials. I credit Dev Ed and Web Dev
 Simplified for their tutorials, which are linked below.
+
+Dev Ed todo list: https://www.youtube.com/watch?v=Ttf3CEsEwMQ
+Web Dev Simplified progress bar: https://www.youtube.com/watch?v=basf1lH1H-E
+Web Dev Simplified drag-and-drop: https://www.youtube.com/watch?v=jfYWwQrtzzY
