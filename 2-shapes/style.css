@@ -1,0 +1,61 @@
+/* https://css-tricks.com/the-shapes-of-css/ */
+
+/* https://www.youtube.com/watch?v=QY7Rj8aZcZk
+      circles with border-radius
+      centering with display: grid and place-items: center
+      leading triangles with skew
+      custom crops with clip-path
+      negative margins to space sections better when doing geometrical crops
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: #444;
+  overflow: hidden;
+}
+
+div {
+  margin: 50px;
+}
+
+.shapes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.shapes h1 {
+  color: white;
+  margin: 50px;
+}
+
+/* take advantage of border corners and how they look w/transparent edges */
+#right-triangle {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid red;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
+
+#trapezoid {
+  height: 120px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 60px solid red;
+}
