@@ -1,0 +1,55 @@
+This is a productivity app based on my own method I've developed over time.
+
+If whoever is reading this is more interested in the code than my productivity
+strategy skip forward a few paragraphs.
+
+I choose about 3 to 5 types of tasks to cycle through with the intention of
+completing the same number of tasks by the end of a session. This is the
+approach I take at my job and encourages me to allocate time more fairly
+between different responsibilities in my role. Example task types are
+documentation, reporting, developing, and email. Example tasks are write a
+doc-string for a function, design a Powerpoint slide to explain how some code I
+wrote adds business value, refactor a runtime bottleneck, and respond to an
+email.
+
+My approach addresses key issues that I found with the Pomodoro strategy I used
+before. The Pomodoro strategy is time-based instead of task based. Some tasks
+such as developing a new piece of code can require a long period of deep focus.
+To me, it's usually counterproductive to interrupt that task to take a break. On
+the other hand, if I finish a task early I put myself again at risk of
+interruption if I lack another short task in the queue.
+
+Task-cycling is good for me because I feel that breaks are more useful between
+tasks. And tasks will take me however long they take me. The major advantage of
+Pomodoro though is that there is a planned healthy balance between the amount
+of time spent working and the time spend resting. When I task cycle, I try to
+have both long and short task types so I can capture big wins for the day while
+still allowing myself to breathe. If I only have long tasks then I include
+breaks as an task type.
+
+
+THE CODE!
+
+Why am I making an app for this? Because I usually keep track on a scratch
+sticky note. It's not environmentally-friendly and I accumulate clutter on my
+workspace. There's probably apps similar to mine out there but they might not
+have the exact mix of features I want. Plus, if I build my own then I gain the
+experience as a developer and have the option of adding whatever features I
+want in the future.
+
+The app is basically a modified to-do list. There's an input box where I can
+submit my task types for the day. Upon submission, a progress bar appears that
+will track the number of tasks I complete for that type. This is facilitated by
+plus and minus buttons associated with each progress bar. There is also a delete
+button for each progress bar if I make a type or change my mind about the day's
+priorities. The progress bars are also draggable so that I can sort them in the
+order I tend to cycle through them.
+
+A future feature will involve prompting the user to specify what task was
+completed. Then at the end of the session, the user can export a report of
+what they accomplished during the session ordered by category.
+
+
+References
+I heavily use code from various YouTube tutorials. I credit Dev Ed and Web Dev
+Simplified for their tutorials, which are linked below.
