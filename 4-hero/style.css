@@ -73,9 +73,10 @@ button.ghost-btn {
 }
 
 .hero-action button.sec-call-btn {
-  background: rgb(150, 150, 150);
-  border: 1px rgb(150, 150, 150);
-  opacity: 0.75;
+  background: white;
+  border: 1px white;
+  opacity: 0.7;
+  color: rgb(20, 50, 160);
   grid-column: grid-mid-col / span 1;
 }
 
