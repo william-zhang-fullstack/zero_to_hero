@@ -2,11 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer=true></script>
     <title></title>
   </head>
   <body>
-
+    <header id='title'>
+      <h1>Task Cycle</h1>
+    </header>
+    <form>
+      <input type="text" class="task-input">
+      <button type="submit" class="task-add">
+        <i class="fas fa-plus-square"></i>
+      </button>
+    </form>
+    <div class="progress-container">
+      <ul class="progress-list"></ul>
+    </div>
   </body>
 </html>
