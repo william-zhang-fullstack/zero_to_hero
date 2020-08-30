@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    border-radius:    20px;
+    border: 1px rgb(20, 50, 160, 0.75);
+    background-color: rgb(20, 50, 160, 0.75);
+    color:            white;
+    font-size:        12px;
+    font-weight:      bold;
+    padding:          12px 25px;
+    letter-spacing:   1px;
+    text-transform:   uppercase;
+    transition:       transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95); /* button gets smaller when clicked */
+}
+
+button:focus {
+    outline: none; /* no highlight on button when moused over */
+}
+
+button.ghost-btn {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-action {
+  display: grid;
+  grid-template-columns: [grid-left] 50% [grid-mid-col] 50% [grid-right];
+  grid-template-rows: [grid-top] 80% [grid-mid-row] auto [grid-bottom];
+  justify-content: center;
+  position: absolute;
+  height: 25vh;
+  width: 40%;
+  margin-top: 15%;
+  margin-left: 5%;
+}
+
+.hero-action h1 {
+  font-size: 3em;
+  min-width: 500px;
+  grid-column: grid-left / span 2;
+  grid-row: grid-top / span 1;
+}
+
+.hero-action button {
+  font-size: 1em;
+  bottom: 0;
+  grid-row: grid-mid-row / span 1;
+}
+
+.hero-action button.main-call-btn {
+  grid-column: grid-left / span 1;
+}
+
+.hero-action button.sec-call-btn {
+  background: rgb(150, 150, 150);
+  border: 1px rgb(150, 150, 150);
+  opacity: 0.75;
+  grid-column: grid-mid-col / span 1;
+}
+
+h1.typewriter {
+
+}
+
+#main-headline {
+  background: transparent;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-shadow: 1.5px 1.5px #333;
+}
