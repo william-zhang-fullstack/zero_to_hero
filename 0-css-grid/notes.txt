@@ -4,5 +4,5 @@ Source
 https://css-tricks.com/dont-overthink-it-grids/
 https://daker.me/2013/07/understanding-css3-box-sizing-property.html
 https://css-tricks.com/snippets/css/complete-guide-grid/
-https://learncssgrid.com/ss
+https://learncssgrid.com/
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
