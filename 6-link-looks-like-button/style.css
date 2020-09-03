@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+a.link-btn {
+  background: #888;
+  border: 1px solid #888;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 45px;
+  font-size: 1.5em;
+  border-radius: 2.5em;
+}
