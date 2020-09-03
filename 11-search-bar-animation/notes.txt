@@ -1,0 +1,21 @@
+So after about 10 projects of building simple things and combining YouTube
+tutorials together I wanted to challenge myself.
+
+I found this YouTube tutorial for a search bar animation and decided to see if
+I could create it without using the tutorial. It would be the first "real" thing
+I build myself. When I finish I can watch the tutorial and reflect on any
+differences in implementation.
+
+Tutorial: https://www.youtube.com/watch?v=v1PeTDrw6OY.
+
+It took me 30 minutes to get the core functionality working and another 18
+minutes to get the animation to have the look I wanted.
+
+==================
+
+My implementation ...
+
+Put a text input and button inside of a div. Make the text input fill the div.
+Make the button a circle slightly shorter than the div and anchor its position
+relative to the right edge. Manage the animation by changing the div width via
+hover/unhover.
