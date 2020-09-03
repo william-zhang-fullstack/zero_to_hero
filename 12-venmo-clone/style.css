@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+i {
+  pointer-events: none;
+}
+
 nav {
   position: absolute;
   top: 0;
