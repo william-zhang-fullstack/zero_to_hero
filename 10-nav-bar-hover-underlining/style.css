@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 4px;
+}
+
+nav {
+  position: absolute;
+  min-height: 70px;
+  width: 100%;
+  background: #222;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 100px auto 150px 150px 150px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+nav * {
+  color: white;
+  font-size: 20px;
+  justify-self: center;
+}
+
+nav div {
+  position: relative;
+}
+
+nav div a {
+  text-align: center;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+}
+
+nav div a:hover {
+  color: steelblue;
+  transition: color 200ms ease-in-out;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.flex {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* make the button accented */
+.border-underline {
+  --accent-color: steelblue;
+  --border-size: 4px;
+}
+
+/* blue button scaled to 0 size */
+.border-underline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  height: var(--border-size);
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 200ms ease-in-out;
+}
+
+/* underline expands */
+.border-underline:hover::before {
+  transform: scale(0.8);
+}
+
+#nav-logo {
+  color: steelblue;
+  grid-column: 1 / span 1;
+}

@@ -1,0 +1,4 @@
+Saw on Spotify that words on the navbar light up when you hover.
+I also learned how to make an underline animation using pseudo-elements.
+
+So lets make a navbar.
