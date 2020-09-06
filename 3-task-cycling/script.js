@@ -11,6 +11,8 @@ function addTaskBar(event) {
   const progressValue = taskInput.value;
   taskInput.value = "";
 
+  if (progressValue === "") return;
+
   const progressDiv = document.createElement("div");
   progressDiv.classList.add("progress");
 
