@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main {
+  height: 100vh;
+  background: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  position: relative;
+}
+
+#chart {
+  border: 1px solid white;
+  transition: all 100ms ease-in-out;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#tooltip {
+  position: absolute;
+  background: white;
+  opacity: 0.9;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  visibility: hidden;
+}
