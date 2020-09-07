@@ -49,6 +49,9 @@ A future feature will involve prompting the user to specify what task was
 completed. Then at the end of the session, the user can export a report of
 what they accomplished during the session ordered by category.
 
+EDIT:
+Added drag-and-drop feature based on Web Dev Simplified's tutorial.
+
 
 References
 I heavily use code from various YouTube tutorials. I credit Dev Ed and Web Dev

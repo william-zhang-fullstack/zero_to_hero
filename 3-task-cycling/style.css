@@ -44,6 +44,10 @@ form button {
   align-items: center;
 }
 
+.progress.dragging {
+  opacity: 0.5;
+}
+
 form button:hover {
   background: #d88771;
   color: white;
@@ -76,7 +80,7 @@ form button:hover {
 }
 
 /* AVOID! FIX LATER! http://outlinenone.com/ */
-.progress button:focus {
+button:focus {
   outline: none;
 }
 
@@ -86,7 +90,7 @@ form button:hover {
   padding: 1rem;
   background: #111;
   color: white;
-
+  pointer-events: none; /* for drag-and-drop */
 }
 
 .progress-bar::before {
@@ -100,25 +104,45 @@ form button:hover {
   width: calc(var(--width, 0) * 1%); /* make variable that is JS-accessible */
   max-width: calc(100% - 0.8rem);
   background: rgb(73, 204, 73);
+  pointer-events: none; /* for drag-and-drop */
 }
 
 .complete-btn,
 .subtract-btn,
 .trash-btn {
-  background: rgb(73, 204, 73);
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 200ms ease-in-out;
+}
+
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+
+.complete-btn:hover {
+  background: #eee;
+  color: rgb(73, 204, 73);
 }
 
 .subtract-btn {
   background: steelblue;
 }
 
+.subtract-btn:hover {
+  background: #eee;
+  color: steelblue;
+}
+
 .trash-btn {
   background: #ff6f47;
+}
+
+.trash-btn:hover {
+  background: #eee;
+  color: #ff6f47;
 }
 
 .fas {

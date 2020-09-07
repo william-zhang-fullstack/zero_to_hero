@@ -6,6 +6,20 @@ const progressList = document.querySelector(".progress-list");
 taskAdd.addEventListener("click", addTaskBar);
 progressList.addEventListener("click", updateProgress);
 
+/* update the containers to have the dragged element move to right position */
+progressList.addEventListener('dragover', e => {
+  e.preventDefault();
+  const draggable = document.querySelector('.dragging');
+  const afterElement = getDragAfterElement(progressList, e.clientY);
+  if (afterElement === null){
+    /* no undragged element below cursor -> append */
+    progressList.appendChild(draggable);
+  } else {
+    /* insert after next undragged element below cursor */
+    progressList.insertBefore(draggable, afterElement);
+  }
+});
+
 function addTaskBar(event) {
   event.preventDefault();
   const progressValue = taskInput.value;
@@ -15,6 +29,12 @@ function addTaskBar(event) {
 
   const progressDiv = document.createElement("div");
   progressDiv.classList.add("progress");
+  progressDiv.classList.add("draggable");
+
+  // drag-and-drop attr and listeners
+  progressDiv.setAttribute("draggable", true);
+  progressDiv.addEventListener('dragstart', () => progressDiv.classList.add('dragging'));
+  progressDiv.addEventListener('dragend', () => progressDiv.classList.remove('dragging'));
 
   // task subtract button
   const subtractButton = document.createElement('button');
@@ -45,7 +65,6 @@ function addTaskBar(event) {
 
   progressList.appendChild(progressDiv);
 }
-
 
 function updateProgress(event) {
   /* update on clicking complete/subtract/delete button */
@@ -82,4 +101,20 @@ function updateProgress(event) {
 function make_fall(element) {
   element.addEventListener('transitionend', () => element.remove());
   element.classList.add("fall");
+}
+
+function getDragAfterElement(container, clientY) {
+  /* identify the next undragged element below cursor */
+  const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')];
+
+  /* 'closest' is our storage ... 'child' are the draggable elements */
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = clientY - (box.top + box.height / 2);
+    if (offset < 0 && offset > closest.offset) {
+      return {offset: offset, element: child};
+    } else {
+      return closest;
+    }
+  }, {offset: Number.NEGATIVE_INFINITY}).element;
 }
